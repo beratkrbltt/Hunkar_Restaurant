@@ -26,8 +26,10 @@ The project showcases a **clean and responsive layout** using **HTML5** and **CS
 ---
 
 ## 🎥 **Preview**
-![1](image/1.png)  
-![2](image/2.png)  
+![1](1.png)  
+![2](2.png)
+![3](3.png)
+![4](4.png)
 
 ---
 
