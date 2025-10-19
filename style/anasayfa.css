@@ -1,0 +1,785 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: #1e2958;
+    width: 100%;
+    padding: 12px;
+}
+
+.footer-elements {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 120px;
+}
+
+.footer-right {
+    margin-left: auto;
+    display: flex;
+    gap: 12px;
+}
+
+.footer a {
+    font-weight: inherit;
+    font-family: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* FOOTER İÇİN RESPONSİVE YAPI */
+
+@media (min-width: 320px) and (max-width: 430px) {
+
+    .footer {
+        width: 100%;
+    }
+
+    .footer-elements {
+        padding: 0 10px;
+    }
+
+    .footer-right {
+        margin: auto;
+        gap: 1px;
+    }
+
+    .footer a {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* NAVBAR KODLARI ANASAYFA */
+.logo {
+    width: 120px;
+    height: 80px;
+}
+
+.navbar {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.navbar li a:hover {
+    color: #c0392b;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(222, 22, 22);
+    border-radius: 2px;
+}
+
+/* NAVBAR KODLARI RESPONSİVE KISIM */
+
+@media screen and (max-width: 768px) {
+
+    .logo {
+        width: 100px;
+        height: 60px;
+    }
+
+    .navbar ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #fff;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        gap: 10px;
+        background-color: rgb(222, 22, 22);
+    }
+
+    .navbar ul li {
+        width: calc(30% - 10px);
+    }
+
+    .navbar ul li a {
+        color: #fff;
+        font-size: 12PX;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .navbar {
+        position: relative;
+    }
+}
+
+
+/* ANA RESİM KODLARI */
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 550px;
+    display: block;
+    z-index: 1;
+}
+
+.text-overlay {
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.first {
+    font-family: 'Brush Script MT', cursive;
+    margin-top: 100px;
+    font-size: 60px;
+    color: red;
+}
+
+.second {
+    margin-top: 20px;
+    font-size: 100px;
+}
+
+.three {
+    font-size: 80px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .image-container img {
+        margin-top: 10px;
+        width: 100%;
+        height: 420px;
+        display: block;
+        z-index: 1;
+    }
+
+    .text-overlay {
+        width: 100%;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+    }
+
+    .text-overlay p {
+        font-size: 40px;
+    }
+}
+
+
+/* SLOGAN KISMI ANASAYFA */
+
+.slogan {
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+    padding: 45px;
+}
+
+
+.first-text {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    color: #1e2958;
+    font-weight: 900;
+    text-shadow: 1px 0 black, -1px 0 black, 0 1px black, 0 -1px black;
+}
+
+.second-text {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    margin-top: 30px;
+    font-weight: 900;
+}
+
+
+
+
+/* HAKKIMDA KISMI CARDS*/
+.cards-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.picture-1 {
+    img {
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    z-index: 1;
+    position: relative;
+}
+
+.picture-1 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.cards-text1 {
+    width: 450px;
+    padding: 60px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    height: 500px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 2;
+    margin-left: 0px;
+
+}
+
+
+.cards-text1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.cards-header {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    color: rgba(163, 104, 33, 0.686);
+    font-family: "Comic Sans MS";
+
+}
+
+/* Ortadaki metin */
+.card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-footer {
+    color: rgba(163, 104, 33, 0.686);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Comic Sans MS";
+}
+
+.cards-1,
+.picture-1,
+.cards-text1 {
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    .cards-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .picture-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+        max-width: 600px;
+        align-items: center;
+    }
+
+    .picture-1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cards-text1 {
+        width: 90%;
+        max-width: 600px;
+        padding: 30px;
+        margin-top: 20px;
+    }
+
+    .cards-header {
+        font-size: 30px;
+    }
+}
+
+.image-container-2 {
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container-2 img {
+    height: 350px;
+    max-width: 100%;
+    width: 100vw;
+    border-radius: 10px;
+}
+
+
+.text-overlay-2 {
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.first-text-2 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 70px;
+}
+
+.second-text-2 {
+    font-size: 70px;
+    white-space: nowrap;
+    font-weight: 900;
+}
+
+
+@media screen and (max-width: 768px) {
+    .first-text-2 {
+        font-size: 40px;
+        white-space: nowrap;
+    }
+
+    .second-text-2 {
+        font-size: 40px;
+        white-space: wrap;
+        font-weight: 600;
+        line-height: 0.9;
+    }
+}
+
+/* HAKKIMDA KISMI CARDS*/
+.cards-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.picture-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 120px;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 600px;
+    z-index: 1;
+    position: relative;
+}
+
+.item-a {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.item-b {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+.item-c {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.item-d {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+.item-e {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+
+.item-f {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+.picture-2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover */
+.picture-2 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.cards-text-2 {
+    width: 400px;
+    height: 150px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgba(163, 104, 33, 0.686);
+    font-family: "Comic Sans MS";
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: -20px;
+    z-index: 2;
+    position: relative;
+}
+
+.cards-text-2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+    .cards-text-2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 120px;
+        margin: 20px auto 0 auto;
+        font-size: 30px;
+        left: 0;
+        transform: none;
+    }
+
+
+    .cards-2 {
+        display: block;
+        margin: 30px auto;
+        max-width: 95%;
+    }
+
+    .picture-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 100px;
+        gap: 15px;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 95%;
+        position: relative;
+        z-index: 7;
+    }
+
+    .item-a {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .item-b {
+        grid-column: 1 / 3;
+        grid-row: 2 / 2;
+        ;
+    }
+
+    .item-c {
+        grid-column: 2 / 2;
+        grid-row: 3 / 4;
+    }
+
+    .item-d {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+}
+
+.touch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cards-3 {
+    width: 400px;
+    height: 150px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    z-index: 2;
+    margin-right: -20px;
+}
+
+.cards-3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.f-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(163, 104, 33, 0.686);
+    font-family: "Comic Sans MS";
+}
+
+.s-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(163, 104, 33, 0.686);
+    font-family: "Comic Sans MS";
+}
+
+.touch-pic {
+    max-width: 600px;
+    z-index: 1;
+    position: relative;
+}
+
+.touch-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.touch-pic img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+    .touch {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .touch-pic {
+        max-width: 90%;
+    }
+
+    .cards-3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        height: 100px;
+        margin: 20px auto 50px auto;
+        transform: none;
+        gap: 10px;
+    }
+
+    .f-text {
+        font-size: 25px;
+        font-weight: bold;
+        color: rgba(163, 104, 33, 0.686);
+        font-family: "Comic Sans MS";
+    }
+
+    .s-text {
+        font-size: 15px;
+        font-weight: bold;
+        color: rgba(163, 104, 33, 0.686);
+        font-family: "Comic Sans MS";
+    }
+
+}
+
+.visit-main {
+    display: flex;
+    flex-direction: row;
+    margin: 50px auto 50px auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.visit-text {
+    background-color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgba(163, 104, 33, 0.686);
+    font-family: "Comic Sans MS";
+    width: 400px;
+    height: 150px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    z-index: 2;
+    position: relative;
+    left: -20px;
+}
+
+.visit-text:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.visit-media {
+    display: flex;
+    flex-direction: row;
+    max-width: 600px;
+    height: 400px;
+    gap: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.visit-media img {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.visit-media img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .visit-main {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        box-sizing: border-box;
+    }
+
+    .visit-text {
+        width: 90%;
+        text-align: center;
+        font-size: 22px;
+        position: static;
+        left: auto;
+    }
+
+    .visit-media {
+        flex-direction: column;
+        max-width: 90%;
+        height: auto;
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: #222329;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer a:hover {
+    color: #f39c12;
+    transform: scale(1.05);
+}
